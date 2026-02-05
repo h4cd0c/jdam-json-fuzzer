@@ -369,7 +369,6 @@ This tool is provided as-is for security testing purposes.
 ## 🔗 References
 
 - [jdam](https://gitlab.com/michenriksen/jdam) - JSON fuzzing mutation engine by Michael Henriksen
-- [Burp Suite](https://portswigger.net/burp) - Web security testing platform
 
 ## 🙏 Credits
 
