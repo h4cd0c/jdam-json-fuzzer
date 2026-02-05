@@ -354,14 +354,6 @@ This tool is designed for authorized security testing only. Users must:
 
 Unauthorized access to computer systems is illegal. The author assumes no liability for misuse.
 
-## 🤝 Contributing
-
-Feedback and contributions welcome! Focus areas:
-- Additional vulnerability patterns
-- Performance optimizations
-- Better anomaly detection
-- Reporting formats
-
 ## 📝 License
 
 This tool is provided as-is for security testing purposes.
