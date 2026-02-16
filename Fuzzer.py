@@ -72,20 +72,14 @@ def parse_burp_request(file_path: str) -> Dict:
     if not host:
         raise ValueError("No Host header found in request")
     
-    # Improved scheme detection: check port and SSL-related headers
-    scheme = 'http'  # Default
+    # Default to HTTPS (port 443)
+    scheme = 'https'
     
-    # Check if host includes explicit port
+    # Check if host includes explicit port 80 (HTTP)
     if ':' in host:
         port = host.split(':')[1]
-        if port == '443':
-            scheme = 'https'
-    
-    # Check for SSL/TLS indicators in headers
-    if any(key.lower() in ['x-forwarded-proto', 'x-forwarded-protocol'] and 
-           value.lower() == 'https' 
-           for key, value in headers.items()):
-        scheme = 'https'
+        if port == '80':
+            scheme = 'http'
     
     url = f"{scheme}://{host}{path}"
     
